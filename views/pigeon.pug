@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1= title
+
+  - 
+    const pigeons = [
+      {
+        breed: "Fantail",
+        gender: "Female",
+        price: "59,99",
+      },
+      {
+        breed: "Jacobin",
+        gender: "Male",
+        price: "39,99",
+      },
+      {
+        breed: "Archangel",
+        gender: "Female",
+        price: "159,99",
+      }
+    ];
+
+  div.container-fluid
+    div.row
+      each pigeon in pigeons
+        div.col-sm-2
+          p Breed: #{pigeon.breed}
+          p Gender: #{pigeon.gender}
+          p Price: #{pigeon.price}
+
+
